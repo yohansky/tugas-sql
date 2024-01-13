@@ -59,9 +59,6 @@ enter terus sampai ada tulisan "postgres=#"
 (3, 3, 3, '2024-01-01', 'dipinjam'), 
 (4, 2, 4, '2024-01-02', 'dipinjam');
 
-// untuk menambahkan FOREIGN KEY dengan perintah 
-# ALTER TABLE peminjaman ADD FOREIGN KEY (id_buku) REFERENCES buku (id_buku);
-
 // untuk melihat data table berdasarkan id
 # SELECT * FROM nama_tabel WHERE id = value_field_id;
 
