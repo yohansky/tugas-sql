@@ -30,9 +30,11 @@ enter terus sampai ada tulisan "postgres=#"
     id_buku INT NOT NULL, 
     id_peminjam INT NOT NULL, 
     tanggal DATE NOT NULL, 
-    keterangan VARCHAR NOT NULL)
-    FOREIGN KEY (id_buku) REFERENCES buku (id_buku)
-    FOREIGN KEY (id_peminjam) REFERENCES peminjam (id_peminjam); 
+    keterangan VARCHAR NOT NULL); 
+
+// untuk menambahkan FOREIGN KEY dengan perintah 
+# ALTER TABLE peminjaman ADD FOREIGN KEY (id_buku) REFERENCES buku (id_buku);
+# ALTER TABLE peminjaman ADD FOREIGN KEY (id_peminjam) REFERENCES peminjam (id_peminjam);
 
 // untuk melihat semua table
 # SELECT * FROM nama_tabel; 
@@ -57,7 +59,7 @@ enter terus sampai ada tulisan "postgres=#"
 (3, 3, 3, '2024-01-01', 'dipinjam'), 
 (4, 2, 4, '2024-01-02', 'dipinjam');
 
-// untuk menambahkan FOREIGN KEY dengan perintah ALTER (Jika lupa memasukkan saat create table)
+// untuk menambahkan FOREIGN KEY dengan perintah 
 # ALTER TABLE peminjaman ADD FOREIGN KEY (id_buku) REFERENCES buku (id_buku);
 
 // untuk melihat data table berdasarkan id
